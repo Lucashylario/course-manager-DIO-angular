@@ -16,12 +16,14 @@
     <!-- Corpo da Tabela -->
     <tbody>
         <tr *ngFor="let course of courses">
-            <td>{{ course.imageURL }}</td>
+            <td><img [src]="course.imageURL" width="30" height="30" ></td>
             <td>{{ course.name }}</td>
             <td>{{ course.price }}</td>
             <td>{{ course.code }}</td>
             <td>{{ course.releaseDate }}</td>
-            <td>{{ course.rating }}</td>
+            <td>
+                <app-star [rating]="course.rating"></app-star>
+            </td>
             <td></td>
         </tr>
     </tbody>
